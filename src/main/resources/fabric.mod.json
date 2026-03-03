@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "inconvenient-inventory",
+  "version": "${version}",
+  "name": "Inconvenient Inventory",
+  "description": "",
+  "authors": ["BergieBerg"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/inconvenient_inventory/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "org.bergie.inconvenient_inventory.client.Inconvenient_inventoryClient"
+    ],
+    "main": [
+      "org.bergie.inconvenient_inventory.Inconvenient_inventory"
+    ]
+  },
+  "mixins": [
+    "inconvenient_inventory.mixins.json",
+    {
+      "config": "inconvenient_inventory.client.mixin.json",
+      "environment": "client"
+    }
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric-api": "*",
+    "minecraft": "${minecraft_version}"
+  }
+}
